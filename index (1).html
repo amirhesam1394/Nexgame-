@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171d23">
+<title>NEXGAME</title>
+<style>
+:root{--bg:#171d23;--panel:#11171d;--line:#39434d;--text:#d8e4ff;--muted:#8798ad;--blue:#55aef4;--purple:#a65be8;--purple2:#271833}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 25%,#1d2d39 0,transparent 36%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#1b2026ed;border-bottom:1px solid #3b424b;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;backdrop-filter:blur(12px)}
+.brand{font:26px Georgia,serif;letter-spacing:2px;white-space:nowrap}.brand span{color:var(--blue)}.subbrand{font:13px Georgia,serif;color:var(--muted)}
+main{max-width:1050px;margin:auto;padding:28px 18px 70px}.hero{padding:35px 8px 28px}.eyebrow{color:var(--blue);letter-spacing:2px;font:13px Georgia,serif}.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.5;margin:8px 0}.hero h1 span{color:var(--blue)}.hero p{color:var(--muted);line-height:2;font-size:16px;max-width:680px}.btn{border:1px solid #b77bea;background:linear-gradient(110deg,#7433bd,#b05bf0);color:white;border-radius:16px;padding:14px 24px;font-weight:bold;cursor:pointer;font-size:15px}.btn.secondary{background:var(--purple2);border-color:#8d65a8}.hero .btn{margin-top:8px}
+.logo-card{border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,#18242d,#101419);padding:32px;text-align:center;margin:10px 0 35px}.orb{width:125px;height:125px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;font:38px Georgia,serif;background:radial-gradient(circle at 35% 30%,#162a39,#61b7fa 65%,#1675c3);box-shadow:0 0 38px #278bd355}.logo-card h2{font:30px Georgia,serif;margin:10px}.logo-card p{color:var(--muted);letter-spacing:2px;font:14px Georgia,serif}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 18px}.section-head h2{font-size:27px;margin:0}.section-head p{color:var(--muted);margin:6px 0 0}.count{border:1px solid #9065a8;background:#261a31;border-radius:30px;padding:9px 15px;color:#e5c9ff;white-space:nowrap}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0 22px}.filter{background:#202832;border:1px solid #45515e;color:var(--text);padding:10px 15px;border-radius:24px;cursor:pointer}.filter.active{background:#342044;border-color:#b17bd4}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:18px}.product{background:linear-gradient(145deg,#17191d,#11171c);border:1px solid var(--line);border-radius:25px;padding:22px;min-height:245px;display:flex;flex-direction:column;gap:14px}.product-top{display:flex;justify-content:space-between;align-items:center}.product-icon{width:56px;height:56px;border-radius:50%;background:#1d2d3b;color:#78baff;display:grid;place-items:center;font:20px Georgia,serif}.tag{border:1px solid #9468b1;border-radius:22px;padding:7px 12px;background:#281a34;color:#e3c8ff;font-size:12px}.product h3{font-size:25px;margin:8px 0 0}.product p{color:var(--muted);line-height:1.8;margin:0}.product .price{color:#ffd76a;font-size:23px;font-weight:900;line-height:1.7;text-shadow:0 1px 8px #0008}.product .price small{display:block;color:#aebbd0;font-size:12px;font-weight:normal;text-shadow:none}.product .btn{width:100%;margin-top:auto}
+.info{margin-top:32px;border:1px solid var(--line);border-radius:22px;padding:22px;background:#131a20}.info h3{margin-top:0}.info p{color:var(--muted);line-height:2}
+.modal{display:none;position:fixed;inset:0;z-index:10;background:#0009;padding:18px;align-items:center;justify-content:center}.modal.show{display:flex}.dialog{width:min(100%,480px);background:#1a222a;border:1px solid #596574;border-radius:24px;padding:24px;box-shadow:0 20px 80px #0009}.dialog h3{margin-top:0;font-size:23px}.dialog label{display:block;color:#b5c3d6;margin:14px 0 7px}.dialog input,.dialog textarea,.dialog select{width:100%;padding:13px;border-radius:12px;border:1px solid #485767;background:#10171e;color:white;font:15px Tahoma}.dialog textarea{min-height:85px;resize:vertical}.dialog-actions{display:flex;gap:10px;margin-top:18px}.dialog-actions button{flex:1}.notice{font-size:12px;color:#9eacbd;line-height:1.8}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#263442;border:1px solid #60758b;border-radius:14px;padding:12px 18px;display:none;z-index:20}
+footer{text-align:center;color:#7e8da0;padding:24px;border-top:1px solid #303b46;font:13px Georgia,serif}
+@media(max-width:520px){header{padding:15px 18px}.brand{font-size:21px}.subbrand{font-size:10px}.hero{padding-top:22px}.logo-card{padding:25px 16px}.section-head{align-items:start;flex-direction:column}.grid{grid-template-columns:1fr}.product{min-height:220px}}
+</style>
+</head>
+<body>
+<header><div class="subbrand">CALL OF DUTY MOBILE</div><div class="brand">NEX<span>GAME</span></div></header>
+<main>
+<section class="hero">
+<div class="eyebrow">YOUR GAME. YOUR MARKET.</div>
+<h1>خرید <span>سی‌پی کالاف دیوتی موبایل</span></h1>
+<p>بسته سی‌پی موردنظرت رو انتخاب کن. قیمت هر بسته کنار همان محصول نمایش داده شده است.</p>
+<button class="btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">مشاهده محصولات</button>
+</section>
+<section class="logo-card"><div class="orb">CP</div><h2>NEXGAME</h2><p>YOUR GAME. YOUR MARKET</p><span class="count">CALL OF DUTY MOBILE STORE</span></section>
+<section id="shop">
+<div class="section-head"><div><h2>محصولات فروشگاه</h2><p>دسته‌بندی موردنظرت رو انتخاب کن.</p></div><span class="count" id="shown">۱۴ محصول</span></div>
+<div class="filters" id="filters">
+<button class="filter active" data-cat="all">همه</button><button class="filter" data-cat="cp">سی‌پی</button><button class="filter" data-cat="double">سی‌پی ویژه</button><button class="filter" data-cat="pass">بتل پس پرو</button><button class="filter" data-cat="bundle">باندل‌ها</button>
+</div>
+<div class="grid" id="products"></div>
+</section>
+<section class="info"><h3>راهنمای ثبت سفارش</h3><p>محصول موردنظر رو انتخاب کن و اطلاعات لازم رو در فرم بنویس. این نسخه نمایشی است: سفارش‌ها هنوز به درگاه پرداخت یا سیستم شارژ متصل نیستند. برای امنیت، رمز عبور اکانتت رو وارد نکن.</p></section>
+</main>
+<footer>NEXGAME · YOUR GAME. YOUR MARKET</footer>
+<div class="modal" id="modal"><div class="dialog">
+<h3 id="modalTitle">ثبت درخواست</h3>
+<form id="orderForm">
+<label for="player">شناسه بازیکن (Player ID)</label><input id="player" required placeholder="شناسه داخل بازی">
+<label for="contact">راه ارتباطی</label><input id="contact" required placeholder="مثلاً شماره تماس یا آیدی پیام‌رسان">
+<label for="note">توضیحات (اختیاری)</label><textarea id="note" placeholder="اگر نکته‌ای هست بنویس..."></textarea>
+<p class="notice">رمز اکانت یا کد ورودت رو وارد نکن. قیمت‌های نمایش‌داده‌شده مربوط به فهرست فعلی فروشگاه هستند.</p>
+<div class="dialog-actions"><button class="btn" type="submit">ثبت درخواست</button><button class="btn secondary" type="button" onclick="closeModal()">انصراف</button></div>
+</form></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const items=[
+{cat:'cp',name:'CP 80',tag:'بسته ۱',price:200900,icon:'CP'},
+{cat:'cp',name:'CP 160',tag:'بسته ۲',price:400900,icon:'CP'},
+{cat:'cp',name:'CP 240',tag:'بسته ۳',price:615900,icon:'CP'},
+{cat:'cp',name:'CP 320',tag:'بسته ۴',price:820900,icon:'CP'},
+{cat:'cp',name:'CP 400',tag:'بسته ۵',price:980900,icon:'CP'},
+{cat:'cp',name:'CP 420',tag:'بسته ۶',price:1110900,icon:'CP'},
+{cat:'cp',name:'CP 480',tag:'بسته ۷',price:1125900,icon:'CP'},
+{cat:'cp',name:'CP 500',tag:'بسته ۸',price:1490900,icon:'CP'},
+{cat:'cp',name:'CP 560',tag:'بسته ۹',price:1515900,icon:'CP'},
+{cat:'cp',name:'CP 580',tag:'بسته ۱۰',price:1580900,icon:'CP'},
+{cat:'cp',name:'CP 660',tag:'بسته ۱۱',price:1815900,icon:'CP'},
+{cat:'cp',name:'CP 720',tag:'بسته ۱۲',price:1845900,icon:'CP'},
+{cat:'cp',name:'CP 740',tag:'بسته ۱۳',price:1910900,icon:'CP'},
+{cat:'cp',name:'CP 800',tag:'بسته ۱۴',price:2135900,icon:'CP'}
+];
+let selected=null;
+const products=document.getElementById('products');
+function render(cat='all'){
+ const list=items.filter(x=>cat==='all'||x.cat===cat);
+ products.innerHTML=list.map(x=>`<article class="product"><div class="product-top"><span class="tag">${x.tag}</span><span class="product-icon">${x.icon}</span></div><h3>${x.name}</h3><div class="price">${x.price.toLocaleString('en-US')} <small>تومان</small></div><button class="btn secondary" onclick="openOrder('${x.name}')">انتخاب محصول</button></article>`).join('');
+ document.getElementById('shown').textContent=list.length+' محصول';
+}
+document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.cat)}));
+function openOrder(name){selected=name;document.getElementById('modalTitle').textContent='درخواست '+name;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const id='NG-'+Math.random().toString(36).slice(2,8).toUpperCase();const data={id,product:selected,player:document.getElementById('player').value,contact:document.getElementById('contact').value,note:document.getElementById('note').value};try{const old=JSON.parse(sessionStorage.getItem('ng_orders')||'[]');old.push(data);sessionStorage.setItem('ng_orders',JSON.stringify(old))}catch(_){}closeModal();e.target.reset();const t=document.getElementById('toast');t.textContent='درخواست نمایشی ثبت شد · کد پیگیری: '+id;t.style.display='block';setTimeout(()=>t.style.display='none',4500)});
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+render();
+</script>
+</body></html>
